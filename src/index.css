@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply font-[Raleway];
+	}
+	li {
+		@apply px-4;
+		@apply cursor-pointer;
+	}
+}
+
+.content {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 250px;
+}
+
+.content:hover {
+	background-image: linear-gradient(
+		to right,
+		rgba(40, 60, 103, 0.387),
+		hsla(243, 49%, 15%, 0.684)
+	) !important;
+}
+/* custom csss */
+
+.animate-charcter {
+	text-transform: uppercase;
+	background-image: linear-gradient(
+		-225deg,
+		#231557 0%,
+		#44107a 29%,
+		#ff1361 67%,
+		#fff800 100%
+	);
+	background-size: auto auto;
+	background-clip: border-box;
+	background-size: 200% auto;
+	color: #fff;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 2s linear infinite;
+	display: inline-block;
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
